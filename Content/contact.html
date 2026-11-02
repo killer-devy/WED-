@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet"href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Contact Us | SoleStreet Sneakers</title>
+     <meta name="description"
+    content="Contact SoleStreet Sneakers in Johannesburg or Pretoria for assistance with products, sizing and general enquiries.">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -77,16 +83,20 @@
         <!-- Johannesburg Map -->
         <section>
 
-            <h2>Johannesburg Location Map</h2>
+        <!-- 2.1 Interactive Store Map -->
 
-            <iframe
-                src="https://www.google.com/maps?q=Sandton+City+Johannesburg&output=embed"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
+<section class="store-map-section">
+
+    <h2>Find Our Stores</h2>
+
+    <p>
+        Explore the locations of our Johannesburg
+        and Pretoria stores using the interactive map.
+    </p>
+
+    <div id="storeMap"></div>
+
+</section>
 
         </section>
 
@@ -125,16 +135,20 @@
         <!-- Pretoria Map -->
         <section>
 
-            <h2>Pretoria Location Map</h2>
+        <!-- 2.1 Interactive Store Map -->
 
-            <iframe
-                src="https://www.google.com/maps?q=Menlyn+Maine+Pretoria&output=embed"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
+<section class="store-map-section">
+
+    <h2>Find Our Stores</h2>
+
+    <p>
+        Explore the locations of our Johannesburg
+        and Pretoria stores using the interactive map.
+    </p>
+
+    <div id="storeMap"></div>
+
+</section>
 
         </section>
 
@@ -144,55 +158,44 @@
 
             <h2>Send Us a Message</h2>
 
-            <form action="#" method="post">
+            
+<form id="contactForm"
+      action="mailto:info@solestreet.co.za"
+      method="post"
+      enctype="text/plain">
 
-                <label for="name">Full Name:</label>
-                <br>
+    <label for="contactName">Full Name:</label>
+    <input type="text" id="contactName" name="Full Name"
+           minlength="2" maxlength="50" required>
 
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                >
+    <label for="contactEmail">Email Address:</label>
+    <input type="email" id="contactEmail" name="Email"
+           required>
 
-                <br><br>
+    <label for="contactPhone">Phone Number:</label>
+    <input type="tel" id="contactPhone" name="Phone"
+           pattern="[0-9]{10}"
+           placeholder="0123456789"
+           title="Enter a 10-digit phone number"
+           required>
 
+    <label for="messageType">Message Type:</label>
+    <select id="messageType" name="Message Type" required>
+        <option value="">Select message type</option>
+        <option value="General">General Message</option>
+        <option value="Support">Customer Support</option>
+        <option value="Complaint">Complaint</option>
+        <option value="Suggestion">Suggestion</option>
+    </select>
 
-                <label for="email">Email Address:</label>
-                <br>
+    <label for="contactMessage">Your Message:</label>
+    <textarea id="contactMessage" name="Message"
+              minlength="10" maxlength="1000"
+              required></textarea>
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
+    <button type="submit">Send Message</button>
+</form>
 
-                <br><br>
-
-
-                <label for="message">Message:</label>
-                <br>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    cols="40"
-                    placeholder="Type your message here..."
-                    required
-                ></textarea>
-
-                <br><br>
-
-                <button type="submit">Send Message</button>
-
-                <button type="reset">Clear</button>
-
-            </form>
 
         </section>
 
@@ -205,7 +208,13 @@
         <p> 2026 SoleStreet Sneakers. All rights reserved.</p>
 
     </footer>
+    
+    <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    defer>
+</script>
 
+<script src="script.js" defer></script>
 </body>
 
 </html>

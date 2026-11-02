@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Enquiry | SoleStreet Sneakers</title>
+    <meta name="description"
+    content="Make a product enquiry at SoleStreet Sneakers. Ask about sneaker availability, prices, sizes and collections.">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -49,194 +53,54 @@
 
             <h2>Send Us an Enquiry</h2>
 
-            <form action="#" method="post">
 
-                <!-- Full Name -->
-                <label for="fullName">Full Name:</label>
-                <br>
+<form id="enquiryForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName"
+           minlength="2" maxlength="50" required>
 
-                <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    placeholder="Enter your full name"
-                    required
-                >
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
 
-                <br><br>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone"
+           pattern="[0-9]{10}"
+           placeholder="0123456789"
+           title="Enter a 10-digit phone number"
+           required>
 
+    <label for="product">Product:</label>
+    <select id="product" name="product" required>
+        <option value="">Select a product</option>
+        <option value="SoleStreet Classic Runner">SoleStreet Classic Runner</option>
+        <option value="StreetFlex Low">StreetFlex Low</option>
+        <option value="Urban Court 2">Urban Court 2</option>
+        <option value="Metro High-Top">Metro High-Top</option>
+        <option value="StreetLite Runner">StreetLite Runner</option>
+    </select>
 
-                <!-- Email -->
-                <label for="email">Email Address:</label>
-                <br>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity"
+           min="1" max="20" required>
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email address"
-                    required
-                >
+    <label for="enquiryType">Enquiry Type:</label>
+    <select id="enquiryType" name="enquiryType" required>
+        <option value="">Select enquiry type</option>
+        <option value="Product Availability">Product Availability</option>
+        <option value="Product Pricing">Product Pricing</option>
+        <option value="General Enquiry">General Enquiry</option>
+    </select>
 
-                <br><br>
+    <label for="message">Additional Information:</label>
+    <textarea id="message" name="message"
+              minlength="10" maxlength="500"
+              required></textarea>
 
+    <button type="submit">Submit Enquiry</button>
+</form>
 
-                <!-- Phone -->
-                <label for="phone">Phone Number:</label>
-                <br>
+<div id="enquiryResponse" aria-live="polite"></div>
 
-                <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    required
-                >
-
-                <br><br>
-
-
-                <!-- Product Selection -->
-                <label for="product">Product:</label>
-                <br>
-
-                <select id="product" name="product" required>
-
-                    <option value="">-- Select a product --</option>
-                    <option value="classic-runner">
-                        SoleStreet Classic Runner
-                    </option>
-                    <option value="streetflex">
-                        StreetFlex Low
-                    </option>
-                    <option value="urban-court">
-                        Urban Court 2
-                    </option>
-                    <option value="metro-high-top">
-                        Metro High-Top
-                    </option>
-                    <option value="streetlite">
-                        StreetLite Runner
-                    </option>
-
-                </select>
-
-                <br><br>
-
-
-                <!-- Shoe Size -->
-                <label for="size">Preferred Size:</label>
-                <br>
-
-                <select id="size" name="size" required>
-
-                    <option value="">-- Select a size --</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-
-                </select>
-
-                <br><br>
-
-
-                <!-- Enquiry Type -->
-                <label for="enquiryType">Enquiry Type:</label>
-                <br>
-
-                <select id="enquiryType" name="enquiryType" required>
-
-                    <option value="">-- Select an enquiry type --</option>
-                    <option value="availability">
-                        Product Availability
-                    </option>
-                    <option value="size">
-                        Size Information
-                    </option>
-                    <option value="price">
-                        Price Information
-                    </option>
-                    <option value="collection">
-                        Collection Information
-                    </option>
-                    <option value="other">
-                        Other
-                    </option>
-
-                </select>
-
-                <br><br>
-
-
-                <!-- Message -->
-                <label for="message">Your Enquiry:</label>
-                <br>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    cols="40"
-                    placeholder="Type your enquiry here..."
-                    required
-                ></textarea>
-
-                <br><br>
-
-
-                <!-- Contact Preference -->
-                <p>Preferred Contact Method:</p>
-
-                <input
-                    type="radio"
-                    id="emailContact"
-                    name="contactMethod"
-                    value="email"
-                    required
-                >
-
-                <label for="emailContact">Email</label>
-
-                <br>
-
-                <input
-                    type="radio"
-                    id="phoneContact"
-                    name="contactMethod"
-                    value="phone"
-                >
-
-                <label for="phoneContact">Phone</label>
-
-                <br><br>
-
-
-                <!-- Newsletter -->
-                <input
-                    type="checkbox"
-                    id="newsletter"
-                    name="newsletter"
-                    value="yes"
-                >
-
-                <label for="newsletter">
-                    I would like to receive SoleStreet news and promotions.
-                </label>
-
-                <br><br>
-
-
-                <!-- Buttons -->
-                <button type="submit">Submit Enquiry</button>
-
-                <button type="reset">Clear Form</button>
-
-            </form>
 
         </section>
 
@@ -264,7 +128,7 @@
         <p> 2026 SoleStreet Sneakers. All rights reserved.</p>
 
     </footer>
-
+<script src="script.js" defer></script>
 </body>
 
 </html>
