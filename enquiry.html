@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Enquiry | SoleStreet Sneakers</title>
+    <meta name="description"
+    content="Make a product enquiry at SoleStreet Sneakers. Ask about sneaker availability, prices, sizes and collections.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>SoleStreet Sneakers</h1>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Enquiry Introduction -->
+        <section>
+
+            <h2>Product Enquiry</h2>
+
+            <p>
+                Interested in one of our sneakers? Complete the form
+                below and a member of the SoleStreet team will get
+                back to you.
+            </p>
+
+        </section>
+
+
+        <!-- Enquiry Form -->
+        <section>
+
+            <h2>Send Us an Enquiry</h2>
+
+
+<form id="enquiryForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName"
+           minlength="2" maxlength="50" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone"
+           pattern="[0-9]{10}"
+           placeholder="0123456789"
+           title="Enter a 10-digit phone number"
+           required>
+
+    <label for="product">Product:</label>
+    <select id="product" name="product" required>
+        <option value="">Select a product</option>
+        <option value="SoleStreet Classic Runner">SoleStreet Classic Runner</option>
+        <option value="StreetFlex Low">StreetFlex Low</option>
+        <option value="Urban Court 2">Urban Court 2</option>
+        <option value="Metro High-Top">Metro High-Top</option>
+        <option value="StreetLite Runner">StreetLite Runner</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity"
+           min="1" max="20" required>
+
+    <label for="enquiryType">Enquiry Type:</label>
+    <select id="enquiryType" name="enquiryType" required>
+        <option value="">Select enquiry type</option>
+        <option value="Product Availability">Product Availability</option>
+        <option value="Product Pricing">Product Pricing</option>
+        <option value="General Enquiry">General Enquiry</option>
+    </select>
+
+    <label for="message">Additional Information:</label>
+    <textarea id="message" name="message"
+              minlength="10" maxlength="500"
+              required></textarea>
+
+    <button type="submit">Submit Enquiry</button>
+</form>
+
+<div id="enquiryResponse" aria-live="polite"></div>
+
+
+        </section>
+
+
+        <!-- Additional Information -->
+        <section>
+
+            <h2>Need Help?</h2>
+
+            <p>
+                If you have questions about a product, size or
+                availability, our team is ready to assist you.
+            </p>
+
+            <a href="contact.html">Contact Us</a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p> 2026 SoleStreet Sneakers. All rights reserved.</p>
+
+    </footer>
+<script src="script.js" defer></script>
+</body>
+
+</html>

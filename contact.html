@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet"href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <title>Contact Us | SoleStreet Sneakers</title>
+     <meta name="description"
+    content="Contact SoleStreet Sneakers in Johannesburg or Pretoria for assistance with products, sizing and general enquiries.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>SoleStreet Sneakers</h1>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Contact Introduction -->
+        <section>
+
+            <h2>Contact SoleStreet Sneakers</h2>
+
+            <p>
+                Have a question about our sneakers or need help finding
+                the right size? Get in touch with the SoleStreet team.
+            </p>
+
+        </section>
+
+
+        <!-- Johannesburg Location -->
+        <section>
+
+            <h2>Johannesburg Store</h2>
+
+            <address>
+                SoleStreet Sneakers<br>
+                Sandton City<br>
+                Sandton, Johannesburg<br>
+                Gauteng, South Africa
+            </address>
+
+            <p>
+                <strong>Phone:</strong> 011 555 0147
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                info@solestreet.co.za
+            </p>
+
+            <p>
+                <strong>Opening Hours:</strong><br>
+                Monday - Friday: 09:00 - 18:00<br>
+                Saturday: 09:00 - 16:00<br>
+                Sunday: 10:00 - 14:00
+            </p>
+
+        </section>
+
+
+        <!-- Johannesburg Map -->
+        <section>
+
+        <!-- 2.1 Interactive Store Map -->
+
+<section class="store-map-section">
+
+    <h2>Find Our Stores</h2>
+
+    <p>
+        Explore the locations of our Johannesburg
+        and Pretoria stores using the interactive map.
+    </p>
+
+    <div id="storeMap"></div>
+
+</section>
+
+        </section>
+
+
+        <!-- Pretoria Location -->
+        <section>
+
+            <h2>Pretoria Store</h2>
+
+            <address>
+                SoleStreet Sneakers<br>
+                Menlyn Maine<br>
+                Menlyn, Pretoria<br>
+                Gauteng, South Africa
+            </address>
+
+            <p>
+                <strong>Phone:</strong> 012 555 0189
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                pretoria@solestreet.co.za
+            </p>
+
+            <p>
+                <strong>Opening Hours:</strong><br>
+                Monday - Friday: 09:00 - 18:00<br>
+                Saturday: 09:00 - 16:00<br>
+                Sunday: 10:00 - 14:00
+            </p>
+
+        </section>
+
+
+        <!-- Pretoria Map -->
+        <section>
+
+        <!-- 2.1 Interactive Store Map -->
+
+<section class="store-map-section">
+
+    <h2>Find Our Stores</h2>
+
+    <p>
+        Explore the locations of our Johannesburg
+        and Pretoria stores using the interactive map.
+    </p>
+
+    <div id="storeMap"></div>
+
+</section>
+
+        </section>
+
+
+        <!-- Contact Form -->
+        <section>
+
+            <h2>Send Us a Message</h2>
+
+            
+<form id="contactForm"
+      action="mailto:info@solestreet.co.za"
+      method="post"
+      enctype="text/plain">
+
+    <label for="contactName">Full Name:</label>
+    <input type="text" id="contactName" name="Full Name"
+           minlength="2" maxlength="50" required>
+
+    <label for="contactEmail">Email Address:</label>
+    <input type="email" id="contactEmail" name="Email"
+           required>
+
+    <label for="contactPhone">Phone Number:</label>
+    <input type="tel" id="contactPhone" name="Phone"
+           pattern="[0-9]{10}"
+           placeholder="0123456789"
+           title="Enter a 10-digit phone number"
+           required>
+
+    <label for="messageType">Message Type:</label>
+    <select id="messageType" name="Message Type" required>
+        <option value="">Select message type</option>
+        <option value="General">General Message</option>
+        <option value="Support">Customer Support</option>
+        <option value="Complaint">Complaint</option>
+        <option value="Suggestion">Suggestion</option>
+    </select>
+
+    <label for="contactMessage">Your Message:</label>
+    <textarea id="contactMessage" name="Message"
+              minlength="10" maxlength="1000"
+              required></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p> 2026 SoleStreet Sneakers. All rights reserved.</p>
+
+    </footer>
+    
+    <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    defer>
+</script>
+
+<script src="script.js" defer></script>
+</body>
+
+</html>
